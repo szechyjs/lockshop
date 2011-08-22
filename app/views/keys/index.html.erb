@@ -1,0 +1,37 @@
+<section id="cores">
+	<div class="page-header">
+		<h1>Listing keys</h1>
+	</div>
+
+	<table>
+	  <tr>
+		<th>Name</th>
+		<th>Marking</th>
+		<th>Description</th>
+		<th>Keytype</th>
+		<th>Keyway</th>
+		<th>Code</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	  </tr>
+
+	<% @keys.each do |key| %>
+	  <tr>
+		<td><%= key.name %></td>
+		<td><%= key.marking %></td>
+		<td><%= key.description %></td>
+		<td><%= Keytype.find(key.keytype_id).name %></td>
+		<td><%= Keyway.find(key.keyway_id).name %></td>
+		<td><%= key.code %></td>
+		<td><%= link_to 'Show', key %></td>
+		<td><%= link_to 'Edit', edit_key_path(key) %></td>
+		<td><%= link_to 'Destroy', key, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'New Key', new_key_path %>
+</section>

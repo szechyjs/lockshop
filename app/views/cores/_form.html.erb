@@ -1,0 +1,53 @@
+<%= form_for(@core) do |f| %>
+  <% if @core.errors.any? %>
+    <div class="alert-message block-message error">
+      <h2><%= pluralize(@core.errors.count, "error") %> prohibited this core from being saved:</h2>
+
+      <ul>
+      <% @core.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <%= f.label :name %>
+	<div class="input">
+		<%= f.text_field :name %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :description %>
+	<div class="input">
+		<%= f.text_field :description %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :marking %>
+	<div class="input">
+		<%= f.text_field :marking %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :keyway_id %>
+	<div class="input">
+		<%= f.collection_select(:keyway_id, @keyway, :id, :name) %>\
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :change_id %>
+	<div class="input">
+		<%= f.collection_select(:change_id, @change, :id, :name) %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :control_id %>
+	<div class="input">
+		<%= f.collection_select(:control_id, @control, :id, :name) %>
+	</div>
+  </div>
+  <div class="actions">
+	<button type="submit" class="btn primary">Save</button>
+  </div>
+<% end %>

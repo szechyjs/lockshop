@@ -1,0 +1,36 @@
+<section id="cores">
+	<div class="page-header">
+		<h1><%= @key.name %></h1>
+	</div>
+
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <b>Marking:</b>
+	  <%= @key.marking %>
+	</p>
+
+	<p>
+	  <b>Description:</b>
+	  <%= @key.description %>
+	</p>
+
+	<p>
+	  <b>Keytype:</b>
+	  <%= Keytype.find(@key.keytype_id).name %>
+	</p>
+
+	<p>
+	  <b>Keyway:</b>
+	  <%= Keyway.find(@key.keyway_id).name %>
+	</p>
+
+	<p>
+	  <b>Code:</b>
+	  <%= @key.code %>
+	</p>
+
+
+	<%= link_to 'Edit', edit_key_path(@key) %> |
+	<%= link_to 'Back', keys_path %>
+</section>

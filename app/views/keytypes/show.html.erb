@@ -1,0 +1,16 @@
+<section id="cores">
+	<div class="page-header">
+		<h1><%= @keytype.name %></h1>
+	</div>
+	
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <b>Description:</b>
+	  <%= @keytype.description %>
+	</p>
+
+
+	<%= link_to 'Edit', edit_keytype_path(@keytype) %> |
+	<%= link_to 'Back', keytypes_path %>
+</section>

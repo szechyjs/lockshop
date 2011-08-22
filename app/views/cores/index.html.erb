@@ -1,0 +1,37 @@
+<section id="cores">
+	<div class="page-header">
+		<h1>Listing cores</h1>
+	</div>
+
+	<table>
+	  <tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Marking</th>
+		<th>Change</th>
+		<th>Control</th>
+		<th>Keyway</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	  </tr>
+
+	<% @cores.each do |core| %>
+	  <tr>
+		<td><%= core.name %></td>
+		<td><%= core.description %></td>
+		<td><%= core.marking %></td>
+		<td><%= link_to Key.find(core.change_id).marking, key_path(core.change_id) %></td>
+		<td><%= link_to Key.find(core.control_id).name, key_path(core.control_id) %></td>
+		<td><%= Keyway.find(core.keyway_id).name %></td>
+		<td><%= link_to 'Show', core %></td>
+		<td><%= link_to 'Edit', edit_core_path(core) %></td>
+		<td><%= link_to 'Destroy', core, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'New Core', new_core_path %>
+</section>

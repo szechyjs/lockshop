@@ -1,0 +1,53 @@
+<%= form_for(@key) do |f| %>
+  <% if @key.errors.any? %>
+    <div class="alert-message block-message error">
+      <h2><%= pluralize(@key.errors.count, "error") %> prohibited this key from being saved:</h2>
+
+      <ul>
+      <% @key.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <%= f.label :name %>
+	<div class="input">
+		<%= f.text_field :name %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :marking %>
+	<div class="input">
+		<%= f.text_field :marking %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :description %>
+	<div class="input">
+		<%= f.text_field :description %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :keytype_id %>
+	<div class="input">
+		<%= f.collection_select(:keytype_id, @keytype, :id, :description) %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :keyway_id %>
+	<div class="input">
+		<%= f.collection_select(:keyway_id, @keyway, :id, :name) %>
+	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :code %>
+	<div class="input">
+		<%= f.text_field :code %>
+	</div>
+  </div>
+  <div class="actions">
+    <button type="submit" class="btn primary">Save</button>
+  </div>
+<% end %>

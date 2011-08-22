@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Res Prop Control
+  marking: CTL RS
+  description: Res Prop Control
+  keytype_id: Control
+  keyway_id: H
+  code: 1234567
+
+two:
+  name: Res Prop Basement
+  marking: RS BS
+  description: Res Prop Basement
+  keytype_id: Change
+  keyway_id: H
+  code: 7654321

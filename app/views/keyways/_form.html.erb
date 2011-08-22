@@ -1,0 +1,23 @@
+<%= form_for(@keyway) do |f| %>
+  <% if @keyway.errors.any? %>
+    <div class="alert-message block-message error">
+      <h2><%= pluralize(@keyway.errors.count, "error") %> prohibited this keyway from being saved:</h2>
+
+      <ul>
+      <% @keyway.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <%= f.label :name %>
+	<div class="input">
+		<%= f.text_field :name %>
+	</div>
+  </div>
+  <div class="actions">
+    <button type="submit" class="btn primary">Save</button>
+  </div>
+<% end %>

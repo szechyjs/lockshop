@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  marking: MyString
+  change_id: MyString
+  control_id: MyString
+  keyway_id: MyString
+
+two:
+  name: MyString
+  description: MyString
+  marking: MyString
+  change_id: MyString
+  control_id: MyString
+  keyway_id: MyString
