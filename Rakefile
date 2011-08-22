@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Sfic::Application.load_tasks
+LockShop::Application.load_tasks

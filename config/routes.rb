@@ -1,4 +1,4 @@
-Sfic::Application.routes.draw do
+LockShop::Application.routes.draw do
   resources :cores
 
   resources :keytypes
