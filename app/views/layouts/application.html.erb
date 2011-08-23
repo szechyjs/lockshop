@@ -17,6 +17,9 @@
 					<li class>
 						<%= link_to 'Keys', keys_path %>
 					</li>
+										<li class>
+						<%= link_to 'Cores', cores_path %>
+					</li>
 					<li class>
 						<%= link_to 'Keyways', keyways_path %>
 					</li>
@@ -24,7 +27,11 @@
 						<%= link_to 'Key Types', keytypes_path %>
 					</li>
 					<li class>
-						<%= link_to 'Cores', cores_path %>
+						<% if user_signed_in? %>
+							<%= link_to "Sign out", destroy_user_session_path %>
+						<% else %>
+							<%= link_to "Sign in", new_user_session_path %>
+						<% end %>
 					</li>
 				</ul>
 			</div>
@@ -32,6 +39,11 @@
 	</div>
 	<div id="topspace"></div>
 	<div class="container">
+		<% flash.each do |name, msg| %>
+			<div class="row">
+				<%= content_tag :div, msg, :class => "alert-message #{name}" %>
+			</div>
+		<% end %>
 		<%= yield %>
 	</div>
 	<div id="footer">

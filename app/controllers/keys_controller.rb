@@ -15,6 +15,8 @@
 # along with LockShop.  If not, see <http://www.gnu.org/licenses/>.
 
 class KeysController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /keys
   # GET /keys.xml
   def index

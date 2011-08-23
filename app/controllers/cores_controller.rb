@@ -15,6 +15,8 @@
 # along with LockShop.  If not, see <http://www.gnu.org/licenses/>.
 
 class CoresController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /cores
   # GET /cores.xml
   def index
