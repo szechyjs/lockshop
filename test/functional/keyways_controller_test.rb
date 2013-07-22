@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class KeywaysControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
-
   setup do
     @keyway = keyways(:one)
   end

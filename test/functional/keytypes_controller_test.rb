@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class KeytypesControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
-
   setup do
     @keytype = keytypes(:one)
   end

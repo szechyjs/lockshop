@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CoresControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
-
   setup do
     @core = cores(:one)
   end
