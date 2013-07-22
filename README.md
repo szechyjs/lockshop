@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/szechyjs/lockshop.png?branch=master)](https://travis-ci.org/szechyjs/lockshop)
+
 # LockShop
 LockShop is a Rails application for SFIC lock management.
 Copyright (C) 2011  Jared Szechy
