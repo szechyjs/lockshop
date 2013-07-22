@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class KeysControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @key = keys(:one)
   end
