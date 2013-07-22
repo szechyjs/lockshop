@@ -2,7 +2,8 @@ require 'test_helper'
 
 class CoresControllerTest < ActionController::TestCase
   setup do
-    @core = cores(:one)
+    @core = cores(:core1)
+    sign_in users(:one)
   end
 
   test "should get index" do

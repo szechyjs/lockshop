@@ -17,17 +17,17 @@
 
 	<p>
 	  <b>Change:</b>
-	  <%= link_to Key.find(@core.change_id).marking, key_path(@core.change_id) %>
+	  <%= link_to Key.find(@core.change).marking, key_path(@core.change) %>
 	</p>
 
 	<p>
 	  <b>Control:</b>
-	  <%= link_to Key.find(@core.control_id).name, key_path(@core.control_id) %>
+	  <%= link_to Key.find(@core.control).name, key_path(@core.control) %>
 	</p>
 
 	<p>
 	  <b>Keyway:</b>
-	  <%= Keyway.find(@core.keyway_id).name %>
+	  <%= Keyway.find(@core.keyway).name %>
 	</p>
 
 

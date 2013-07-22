@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+control:
   name: Control
   description: Control
 
-two:
+change:
   name: Change
   description: Change

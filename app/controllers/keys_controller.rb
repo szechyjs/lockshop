@@ -43,8 +43,8 @@ class KeysController < ApplicationController
   # GET /keys/new.xml
   def new
     @key = Key.new
-	@keytype = Keytype.find(:all, :order => "name")
-	@keyway = Keyway.find(:all, :order => "name")
+    @keytype = Keytype.find(:all, :order => "name")
+    @keyway = Keyway.find(:all, :order => "name")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -55,16 +55,16 @@ class KeysController < ApplicationController
   # GET /keys/1/edit
   def edit
     @key = Key.find(params[:id])
-	@keytype = Keytype.find(:all, :order => "name")
-	@keyway = Keyway.find(:all, :order => "name")
+    @keytype = Keytype.find(:all, :order => "name")
+    @keyway = Keyway.find(:all, :order => "name")
   end
 
   # POST /keys
   # POST /keys.xml
   def create
     @key = Key.new(params[:key])
-	@keytype = Keytype.find(:all, :order => "name")
-	@keyway = Keyway.find(:all, :order => "name")
+    @keytype = Keytype.find(:all, :order => "name")
+    @keyway = Keyway.find(:all, :order => "name")
 
     respond_to do |format|
       if @key.save
@@ -81,8 +81,8 @@ class KeysController < ApplicationController
   # PUT /keys/1.xml
   def update
     @key = Key.find(params[:id])
-	@keytype = Keytype.find(:all, :order => "name")
-	@keyway = Keyway.find(:all, :order => "name")
+    @keytype = Keytype.find(:all, :order => "name")
+    @keyway = Keyway.find(:all, :order => "name")
 
     respond_to do |format|
       if @key.update_attributes(params[:key])

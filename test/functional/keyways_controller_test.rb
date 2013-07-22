@@ -2,7 +2,8 @@ require 'test_helper'
 
 class KeywaysControllerTest < ActionController::TestCase
   setup do
-    @keyway = keyways(:one)
+    @keyway = keyways(:H)
+    sign_in users(:one)
   end
 
   test "should get index" do

@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+core1:
   name: MyString
   description: MyString
   marking: MyString
-  change_id: MyString
-  control_id: MyString
-  keyway_id: MyString
+  change: key1
+  control: key2
+  keyway: H
 
-two:
+core2:
   name: MyString
   description: MyString
   marking: MyString
-  change_id: MyString
-  control_id: MyString
-  keyway_id: MyString
+  change: key1
+  control: key2
+  keyway: M

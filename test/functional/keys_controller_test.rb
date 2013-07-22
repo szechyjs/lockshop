@@ -2,7 +2,8 @@ require 'test_helper'
 
 class KeysControllerTest < ActionController::TestCase
   setup do
-    @key = keys(:one)
+    @key = keys(:key1)
+    sign_in users(:one)
   end
 
   test "should get index" do
@@ -17,8 +18,14 @@ class KeysControllerTest < ActionController::TestCase
   end
 
   test "should create key" do
+    k = Key.new
+    k.name = "New Key"
+    k.marking = "ABC"
+    k.keytype = keytypes(:change)
+    k.keyway = keyways(:M)
+    k.code = "123456"
     assert_difference('Key.count') do
-      post :create, :key => @key.attributes
+      post :create, :key => k.attributes
     end
 
     assert_redirected_to key_path(assigns(:key))

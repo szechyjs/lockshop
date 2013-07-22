@@ -30,19 +30,19 @@
 	</div>
   </div>
   <div class="clearfix">
-    <%= f.label :keyway_id %>
+    <%= f.label :keyway %>
 	<div class="input">
-		<%= f.collection_select(:keyway_id, @keyway, :id, :name) %>\
+		<%= f.collection_select(:keyway_id, @keyway, :id, :name) %>
 	</div>
   </div>
   <div class="clearfix">
-    <%= f.label :change_id %>
+    <%= f.label :change %>
 	<div class="input">
 		<%= f.collection_select(:change_id, @change, :id, :name) %>
 	</div>
   </div>
   <div class="clearfix">
-    <%= f.label :control_id %>
+    <%= f.label :control %>
 	<div class="input">
 		<%= f.collection_select(:control_id, @control, :id, :name) %>
 	</div>

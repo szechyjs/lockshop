@@ -2,7 +2,8 @@ require 'test_helper'
 
 class KeytypesControllerTest < ActionController::TestCase
   setup do
-    @keytype = keytypes(:one)
+    @keytype = keytypes(:change)
+    sign_in users(:one)
   end
 
   test "should get index" do

@@ -21,8 +21,8 @@
 		<td><%= key.name %></td>
 		<td><%= key.marking %></td>
 		<td><%= key.description %></td>
-		<td><%= Keytype.find(key.keytype_id).name %></td>
-		<td><%= Keyway.find(key.keyway_id).name %></td>
+		<td><%= Keytype.find(key.keytype).name %></td>
+		<td><%= Keyway.find(key.keyway).name %></td>
 		<td><%= key.code %></td>
 		<td><%= link_to 'Show', key %></td>
 		<td><%= link_to 'Edit', edit_key_path(key) %></td>

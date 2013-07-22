@@ -16,6 +16,7 @@
 
 class Key < ActiveRecord::Base
   belongs_to :keyway
+  belongs_to :keytype
   has_many :cores
   
   validates :code,	:presence => true,

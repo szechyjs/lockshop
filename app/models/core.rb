@@ -16,5 +16,6 @@
 
 class Core < ActiveRecord::Base
   belongs_to :keyway
-  has_many :keys
+  belongs_to :control, :class_name => "Key", :foreign_key => "control_id"
+  belongs_to :change, :class_name => "Key", :foreign_key => "change_id"
 end

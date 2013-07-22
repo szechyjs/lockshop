@@ -21,9 +21,9 @@
 		<td><%= core.name %></td>
 		<td><%= core.description %></td>
 		<td><%= core.marking %></td>
-		<td><%= link_to Key.find(core.change_id).marking, key_path(core.change_id) %></td>
-		<td><%= link_to Key.find(core.control_id).name, key_path(core.control_id) %></td>
-		<td><%= Keyway.find(core.keyway_id).name %></td>
+		<td><%= link_to Key.find(core.change).marking, key_path(core.change) %></td>
+		<td><%= link_to Key.find(core.control).name, key_path(core.control) %></td>
+		<td><%= Keyway.find(core.keyway).name %></td>
 		<td><%= link_to 'Show', core %></td>
 		<td><%= link_to 'Edit', edit_core_path(core) %></td>
 		<td><%= link_to 'Destroy', core, :confirm => 'Are you sure?', :method => :delete %></td>
